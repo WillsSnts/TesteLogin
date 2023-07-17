@@ -24,13 +24,13 @@ ctx.fillRect(0, 0, canvasWidth, canvasHeight);
 
 function draw() 
 {
-  ctx.fillStyle = "rgba(0, 0, 0, 0.05)"; // Define a cor dos caracteres como roxo
+  ctx.fillStyle = "rgba(0, 0, 0, 0.05)"; 
   ctx.fillRect(0, 0, canvasWidth, canvasHeight);
 
   for (var i = 0; i < drops.length; i++) 
   {
     var text = chars[Math.floor(Math.random() * chars.length)];
-    ctx.fillStyle = "rgb(0, 255, 0)"; // Define a cor dos caracteres como roxo
+    ctx.fillStyle = "rgb(0, 255, 0)"; 
     ctx.fillText(text, i * fontSize, drops[i] * lineHeight);
     if (drops[i] * lineHeight > canvasHeight && Math.random() > 0.975) 
     {
@@ -40,5 +40,5 @@ function draw()
   }
 }
 
-// Execute a função de animação em loop
+//loop
 setInterval(draw, 50);
